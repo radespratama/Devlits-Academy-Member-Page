@@ -34,7 +34,7 @@ function RegisterForm({ history }) {
     return (
         <>
             <div className="flex justify-center items-center pb-24">
-                <div className="w-3/12">
+                <div className="w-full md:w-3/12">
                     <h1 className="text-4xl text-gray-900 mb-6">
                         <span className="font-bold">Grow Skills</span> From, <br/>
                         Anywhere
@@ -98,9 +98,9 @@ function RegisterForm({ history }) {
                     </form>
                 </div>
 
-                <div className="w-1/12"></div>
+                <div className="w-1/12 hidden sm:block"></div>
                 
-                <div className="w-5/12 flex justify-end pt-24 pl-16">
+                <div className="w-5/12 hidden sm:block justify-end pt-24 pl-16">
                     <div className="relative" style={{ width: 369, height: 440 }}>
                         <div className="absolute border-indigo-700 border-2 -mt-8 -ml-16 left-0" style={{ width: 324, height: 374 }}></div>
                         <div className="absolute w-full h-full -mb-8 -ml-8">

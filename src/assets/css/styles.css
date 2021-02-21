@@ -19099,6 +19099,83 @@ svg#svg-star { position: absolute; width: 0; height: 0; left: -999px; top: -999p
   z-index: 1; --bg-opacity: 1; background-color: #e2e8f0; background-color: rgba(226, 232, 240, var(--bg-opacity));
 }
 
+.quest-page .toggle {
+  position: relative; left: auto; top: auto;
+}
+
+aside .overlay {
+  --bg-opacity: 1;
+  background-color: #454545;
+  background-color: rgba(69, 69, 69, var(--bg-opacity));
+  opacity: 0.25;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  content: "";
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+}
+
+.toggle {
+  position: relative; width: 20px; height: 20px; z-index: 999;
+}
+
+.toggleSidebar {
+  position: absolute; width: 20px; height: 20px; left: 30px;
+  top: 45px;
+}
+
+.toggle:focus,
+.toggleSidebar:focus {
+  outline: none;
+}
+
+.toggle::before, .toggle::after,
+.toggleSidebar::before, .toggleSidebar::after {
+  --bg-opacity: 1;
+  background-color: #454545;
+  background-color: rgba(69, 69, 69, var(--bg-opacity));
+  transition-property: all;
+  transition-duration: 200ms;
+  right: 0; position: absolute; content: ""; height: 3px; transform-origin: center;
+}
+
+.toggle::before,
+.toggleSidebar::before {
+  top: 26%; width: 20px;
+}
+
+.toggle::after,
+.toggleSidebar::after {
+  top: 58%; width: 12px;
+}
+
+.toggle.active:before, .toggle.active:after,
+.toggleSidebar.active:before, .toggleSidebar.active:after {
+  width: 20px; top: 50%;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.toggle.active:before,
+.toggleSidebar.active:before{
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.toggle.active:after,
+.toggleSidebar.active:after{
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.quest-page .toggleSidebar {
+  position: relative;
+  left: auto; top: auto;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;

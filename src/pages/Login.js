@@ -13,10 +13,10 @@ export default function Login() {
 
     return (
         <>
-            <section className="container mx-auto pt-10">
+            <section className="container mx-auto pt-10 px-4 guest-page">
                 <Header onLight></Header>
             </section>
-            <section className="container mx-auto pt-10">
+            <section className="container mx-auto pt-10 px-4">
                 <LoginForm></LoginForm>
             </section>
             <section className="mt-24 bg-indigo-1000 py-12">

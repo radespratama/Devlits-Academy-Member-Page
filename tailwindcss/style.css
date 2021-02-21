@@ -154,3 +154,55 @@ svg#svg-star { position: absolute; width: 0; height: 0; left: -999px; top: -999p
 .stars .star .placeholder{
     z-index: 1; @apply bg-gray-300;
 }
+.quest-page .toggle {
+    position: relative; left: auto; top: auto;
+}
+aside .overlay {
+    @apply bg-black opacity-25 inset-0 fixed;
+    content: "";
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+}
+
+.toggle {
+    position: relative; width: 20px; height: 20px; z-index: 999;
+}
+.toggleSidebar {
+    position: absolute; width: 20px; height: 20px; left: 30px;
+    top: 45px;
+}
+.toggle:focus,
+.toggleSidebar:focus {
+    outline: none; 
+}
+.toggle::before, .toggle::after,
+.toggleSidebar::before, .toggleSidebar::after {
+    @apply .bg-gray-900 .transition-all .duration-200;
+    right: 0; position: absolute; content: ""; height: 3px; transform-origin: center;
+}
+.toggle::before,
+.toggleSidebar::before {
+    top: 26%; width: 20px;
+}
+.toggle::after,
+.toggleSidebar::after {
+    top: 58%; width: 12px;
+}
+.toggle.active:before, .toggle.active:after,
+.toggleSidebar.active:before, .toggleSidebar.active:after {
+    width: 20px; top: 50%;
+    @apply bg-white;
+}
+.toggle.active:before,
+.toggleSidebar.active:before{
+    transform: translateY(-50%) rotate(-45deg);
+}
+.toggle.active:after,
+.toggleSidebar.active:after{
+    transform: translateY(-50%) rotate(45deg);
+}
+.quest-page .toggleSidebar {
+    position: relative;
+    left: auto; top: auto;
+}

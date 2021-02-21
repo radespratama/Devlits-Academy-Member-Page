@@ -5,7 +5,7 @@ import { ReactComponent as IconPlay } from 'assets/images/btn_play.svg'
 
 export default function ListClassItem({ data }) {
     return (
-        <div className="w-1/4 px-4">
+        <div className="w-full sm:w-1/4 px-4 mb-5 sm:mb-0">
             <div className="item relative">
                 <figure className="item-image">
                     <IconPlay />

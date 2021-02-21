@@ -1,8 +1,12 @@
-import React from 'react'
-
+import React,{ useEffect } from 'react'
 import {Link} from 'react-router-dom'
 
 export default function Unauthenticated({ fallbackUrl, fallbackText, external }) {
+
+    useEffect(() => {
+       document.title = "Devlits Academy | Private"
+    }, [])
+
     return (
         <section className="h-screen flex flex-col items-center">
             <img src={`${process.env.PUBLIC_URL}/assets/images/icon-security.png`} alt="You are not supposed here, please login"/>
